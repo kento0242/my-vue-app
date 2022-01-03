@@ -1,46 +1,40 @@
 <template>
-  <div id="app">
-    <div class="hello-wrold">
-      <img alt="Vue logo" src="./assets/logo.png" />
-      <div class="hello-wrold__message">
-        {{ message }}
-      </div>
+  <div>
+    <div class="title_text">
+      {{ title_text }}
     </div>
-    <TodoList />
+    <div class="explan_text">
+      文字数をカウントします。下の欄に文字数の知りたい文章を入れ、決定ボタンで実行します。
+    </div>
+    <Counter />
   </div>
 </template>
 
 <script>
-import TodoList from "@/components/TodoList.vue"
+import Counter from "@/components/Counter.vue"
 export default {
-  name: "App",
   components: {
-    TodoList,
+    Counter,
   },
-  data: function () {
+  data() {
     return {
-      message: "WebExpert Course Vue Template",
+      title_text: "文字数カウンター⏱",
     }
   },
-  methods: {},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>
-
-<style scoped>
-.hello-wrold {
+.title_text {
   margin-top: 60px;
   text-align: center;
+  font-size: 3rem;
 }
-
-.hello-wrold .hello-world__message {
-  color: #2c3e50;
+.explan_text {
+  margin-top: 10px;
+  text-align: center;
 }
+/* div {
+  text-align: center;
+} */
 </style>
